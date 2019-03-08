@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 manager = Partner()
 
+
 @app.route('/')
 def index():
     return 'Welcome, Starbucks! :) '
@@ -14,7 +15,8 @@ def index():
 def get_order():
     order_info = request.get_json()
 
-    menu = manager.take_order(order_info)
-    return menu.name
+    ordered_menu = manager.take_order(order_info)
 
+    # return str(ordered_menu)
+    return 'total_price: {}, total_time: {}'.format(ordered_menu['price'], ordered_menu['time'])
 

@@ -18,7 +18,8 @@ class Menu:
         self.price = price
         self.time = time
 
-    def menu_kind(self, menu_name):
+    @staticmethod
+    def menu_kind(menu_name):
         for k, v in menu_kind_dict.items():
             if menu_name in v:
                 return k
