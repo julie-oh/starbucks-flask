@@ -1,2 +1,2 @@
 # starbucks-flask
-TOY PROJECT
+## starbucks simulation toy project using Flask Framework
